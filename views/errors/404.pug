@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Error 404
+
+    link(rel='stylesheet', href='/stylesheets/boostrap.min.css')
+  body
+    .container
+        .row.justify-content-center
+            .col-lg-6
+                .text-center.mt-4
+                    p(style="font-size: 15rem; color: red;") 404
+                    p.small The page you require is not exists
+                    p.small URL: #{url}
+                    a(href='/') Go to home page
+
+    script(src="/javascripts/boostrap.bundle.min.js")

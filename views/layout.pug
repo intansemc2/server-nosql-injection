@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    if title
+      title= title
+    else 
+      title Page 
+
+    link(rel='stylesheet', href='/stylesheets/boostrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    block stylesheets
+  body
+    .px-3
+      a.display-4.text-decoration-none.text-dark(href="/") NoSQL INJECTION
+    hr.mb-5
+
+
+    block content
+
+    script(src="/javascripts/jquery-3.5.1.min.js")
+    script(src="/javascripts/boostrap.bundle.min.js")
+
+    block javascripts
+
+    hr.mt-5
+    .px-3.d-flex.justify-content-between
+      a(href="/") Home
+      p @NoSQL Injection 
+
+

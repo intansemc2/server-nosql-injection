@@ -1,6 +1,52 @@
 extends layout
 
+block stylesheets
+
 block content
   .container
-    a.d-block(href="/injection/login_bypass/login") Login can Injection
-    a.d-block(href="/injection/login_bypass/resolve_login") Login with NoSQL Injection protection
+    h1.lead Menu:
+
+    ol 
+      br
+      li 
+        p.mb-0 Tautology
+        span.small Các cuộc tấn công này cho phép bỏ qua cơ chế xác thực hoặc truy cập bằng cách đưa mã vào các câu lệnh điều kiện, tạo ra các biểu thức luôn đúng ( tautologies ).
+        
+        br
+        span.small Demo đăng nhập không cần mật khẩu : 
+          a(href='/injection/tautology/login') Trang Login
+          span &nbsp; &nbsp; &nbsp;
+          a(href='/injection/tautology/resolved_login') Giải pháp Trang Login
+
+        br
+        span.small Demo đăng kí làm cho đăng nhập không cần mật khẩu: 
+          a(href='/injection/tautology/register') Trang Register
+          span &nbsp; &nbsp; &nbsp;
+          a(href='/injection/tautology/login') Trang Login
+          span &nbsp; &nbsp; &nbsp;
+          a(href='/injection/tautology/resolved_register') Giải pháp Trang Register
+
+      br
+      li 
+        p.mb-0 Union queries
+        span.small Union queries là một kỹ thuật chèn SQL nổi tiếng trong đó những kẻ tấn công khai thác một tham số dễ bị tấn công để thay đổi tập dữ liệu được trả về cho một truy vấn nhất định. Việc sử dụng phổ biến nhất của Union queries là bỏ qua các trang xác thực và trích xuất dữ liệu.
+
+      br
+      li 
+        p.mb-0 JavaScript injections
+        span.small Lớp lỗ hổng mới được cơ sở dữ liệu NoSQL giới thiệu này cho phép thực thi JavaScript trong ngữ cảnh cơ sở dữ liệu. JavaScript cho phép các giao dịch và truy vấn phức tạp trên cơ sở dữ liệu. Việc chuyển thông tin đầu vào của người dùng chưa được kiểm soát cho các truy vấn này có thể cho phép đưa vào mã JavaScript tùy ý, điều này có thể dẫn đến việc trích xuất hoặc thay đổi dữ liệu bất hợp pháp.
+
+        
+      br
+      li 
+        p.mb-0 Piggybacked queries
+        span.small Kẻ tấn công khai thác các giả định trong việc diễn giải các ký tự đặc biệt của chuỗi thoát (chẳng hạn như các ký tự kết thúc như ký tự xuống dòng và nguồn cấp dữ liệu dòng [CRLF]) để chèn các truy vấn bổ sung để cơ sở dữ liệu thực thi, điều này có thể dẫn đến việc thực thi mã tùy ý những kẻ tấn công.
+
+      br
+      li 
+        p.mb-0 Origin violation
+        span.small Trong các cuộc tấn công đa nguồn gốc, kẻ tấn công khai thác người dùng hợp pháp và trình duyệt Web của họ để thực hiện một hành động không mong muốn, một ví dụ điển hình là tấn công giả mạo yêu cầu chéo trang web (CSRF).
+
+    hr
+
+block javascripts

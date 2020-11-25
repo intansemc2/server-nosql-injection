@@ -5,17 +5,12 @@ const router = express.Router();
 //Import controller
 const injectionController = require('../controllers/injection.controller');
 
-//Router for Login Page
-router.get('/login_bypass/login', injectionController.loginBypassLogin);
-router.get('/login_bypass/resolve_login', injectionController.loginBypassResolveLogin);
-
-//Router for Login ByPass
-router.get('/api/login_bypass/auth', injectionController.loginBypassAPIAuth);
-router.get('/login_bypass/auth', injectionController.loginBypassAuth);
-
-//Router for Resolve Login ByPass
-router.get('/api/login_bypass/resolve_auth');
-router.get('/login_bypass/resolve_auth');
+//Tautology
+//Login
+router.get('/tautology/login', injectionController.tautology.login);
+router.get('/tautology/resolved_login', injectionController.tautology.resolve_login);
+router.get('/tautology/register', injectionController.tautology.register);
+router.get('/tautology/resolved_register', injectionController.tautology.register);
 
 //Module export
 module.exports = router;

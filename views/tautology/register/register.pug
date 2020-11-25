@@ -1,4 +1,4 @@
-extends ../layout.pug
+extends ../../layout.pug
 
 block stylesheets
 
@@ -7,10 +7,10 @@ block content
         .row 
             .col.d-flex.justify-content-center.align-items.center
                 form(action=action, method="GET", style="width: 500px;")
-                    h1.text-center LOGIN
+                    h1.text-center REGISTER
                     
-                    if loginFail
-                        div.lead.text-danger Login fail due to incorrect username or password
+                    if registerFail
+                        div.lead.text-danger Register fail due to username is not available
                             a.ml-3.text-danger(style="cursor: pointer;", onclick="this.parentNode.remove()") OK
 
                     div.my-3.d-flex.flex-column.align-items-center
@@ -22,7 +22,7 @@ block content
                         input#password.w-100(type="password", name="password", placeholder="Enter your password", value=password)
 
                     div.my-3.d-flex.align-items-center.justify-content-between
-                        input.btn.btn-primary(type="submit", value="Submit")
+                        input.btn.btn-primary(type="submit", name="submit", value="Submit")
                         input.btn.btn-secondary(type="reset", value="Reset")
 
 block javascripts
